@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: "Gothic A1"
+}
+
+body {
+    margin: 0;
+    overflow: scroll;
+    height: 100%;
+}
+
+.search {
+    position: absolute;
+    font-size: 1rem; 
+    padding: 10px;
+    width: 20%;
+    left: 20%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    top: 30%;
+    transition: all .5s ease;
+}
+.search:hover {
+    border: 2px solid rgb(139, 232, 139);
+}
+header {
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    padding: 0.7em;
+    background-color: white;
+    z-index: 100;
+    height: 10%;
+    border-bottom:1px solid rgb(232, 232, 232);
+    box-shadow: 3px 0px 20px rgb(213, 213, 213);
+}
+.logo {
+    position: relative;
+    top: 0.5em;
+    left: 0.8em;
+
+    width: 15em;
+}
+.biglogo {
+        display: block;
+}
+.smalllogo {
+        display: none;
+}
+.logoFontFormatter {
+    font-family: 'Monoton';
+    color: gray;
+    font-size: 2em;
+
+}
+.logoText {
+    font-family: "Gothic A1";
+    color: black;
+    font-size: 2em;
+}
+
+.green {
+    color:green;
+  }
+ul {
+    position: fixed;
+    margin: 0.5em;
+    text-align: right;
+    overflow: hidden;
+    font-family: "Gothic A1";
+    float: left;
+    top: 0.7em;
+    right: 0.3em;
+    font-size: 0.9em;
+
+}
+
+li {
+
+    display: inline-block;
+    color: black;
+    margin: 0.1em 0.3em;
+
+}
+li:hover {
+    border-bottom: 1px solid green;
+}
+
+.post {
+    position: absolute;
+    top: 15%;
+    right:25%;
+    width: 50%;
+    
+    
+}
+
+.contentTitle {
+    font-size: 1.5rem;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 1em;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+}
+.symbol {
+    position: fixed;
+    top: 15%;
+    right: 77%;
+    
+    height:auto;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+}
+.symbol div {
+    padding: 0.3em;
+    font-size: 1.8rem;
+    
+}
+.details {
+    
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    margin-bottom: 1em;
+}
+.details div {
+    padding: 0.7em;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgb(232, 232, 232);
+}
+.details h1 {
+    border-bottom: 1px solid rgb(185, 185, 185);
+    padding: 0.5em;
+}
+.analysis {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    margin-bottom: 1em;
+}
+.analysis h1 {
+    border-bottom: 1px solid rgb(185, 185, 185);
+    padding: 0.5em;
+}
+.analysis div {
+    padding: 1em;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.vote {
+    position: fixed;
+    top: 27%;
+    right: 77%;
+    
+    height:auto;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    
+}
+.vote div {
+    padding: 0.3em;
+    font-size: 1.8rem;
+    
+}
+
+#downvote {
+    cursor: pointer;
+}
+#update {
+    cursor: pointer;
+}
+strong {
+    font-size: 1.5rem;
+}
+
+.commentTop {
+    height: 75%;
+    
+    overflow: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+.comTitle {
+    padding: 0.6em;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    font-size: 1.2rem;
+}
+.comBox {
+    padding: 0.6em;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    font-size: 1.2rem; 
+}
+.comBox h2, .comBox h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.commentT {
+    margin-top: 8;
+    font-size: 1.2rem;
+}
+.comTLine {
+    display: flex;
+    justify-content: space-between;
+}
+.commentTop::-webkit-scrollbar {
+    display: none;
+}
+.commentForm {
+    border-top: 1px solid rgb(185, 185, 185) ;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    height: 25%;
+    background: white;
+}
+.commentForm form {
+    margin: 0;
+}
+.comForm textarea {
+    width: 100%;
+    resize: none;
+    margin: 8 0;
+}
+.comContainer {
+    position: fixed;
+    right: 3%;
+    top: 15%;
+    height: 70%;
+    width: 20%;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+}
+.comAlt {
+    height: 600;
+    display: none;
+}
+.altTop {
+    height: 435;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    
+}
+.altTopTitle {
+    padding: 1em;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+.altForm {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    height: 180;
+    background: white;
+}
+.altForm form {
+    margin: 0;
+}
+.altForm textarea {
+    width: 100%;
+    resize: none;
+    margin: 8 0;
+}
+
+.trade {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    margin-bottom: 1em;
+    
+}
+.trade div {
+    font-size: 1.5em;
+    width: 24.5%;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid rgb(185, 185, 185);
+}
+#votes div {
+    padding: 0 !important;
+    border: none !important;
+}
+.trade #votes {
+    text-align: center;
+    border: none !important;
+}
+
+
+.admin {
+    position: relative;
+    width: 20%;
+    height: 30%;
+    left: 2%;
+    top: 15%;
+    border: 3px solid green;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 1600px) {
+    .post {
+        width: 60%;
+        right: 30%;
+    }
+    .comContainer {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .contentTitle {
+        font-size: 1.3rem;
+    }
+    .symbol div {
+        font-size: 1.5rem;
+    }
+    .details div {
+        font-size: 1.1rem;
+    }
+    .analysis div {
+        font-size: 1rem;
+    }
+    .vote div {
+        font-size: 1.5rem;
+    }
+    strong {
+        font-size: 1.3rem;
+    }
+    .comTitle, .comBox, .comBox h2, .comBox h1, .commentT {
+        font-size: 1rem;
+    }
+    .trade div {
+        font-size: 1.3em;
+        padding: 0.7em;
+    }
+
+    .search,li a {
+            font-size: 0.8rem;
+    }
+    img {
+            width: 150;
+  
+    }
+    .logo {
+            top: 0.9em;
+    }
+    .search {
+            padding: 7px;
+    }
+  
+  }
+@media only screen and (max-width: 900px){
+    .post {
+        width: 60%;
+        right: 35%;
+    }
+    .comContainer {
+        width: 30%;
+    }
+    .search {
+          left: 30%;
+          width: 26%;
+    }
+  }
+@media only screen and (max-width: 720px) {
+    .comContainer {
+        display: none;
+    }
+    .post {
+        width: 90%;
+        right: 5%;
+    }
+    .trade div {
+        font-size: 1.1em;
+        padding: 0.5em;
+    }
+    .comAlt {
+        display: block;
+    }     
+        .search, .lineContainer, li a {
+            font-size: 0.7rem;
+     }
+     
+     
+   
+  }
+  
+@media only screen and (max-width: 680px) {
+         
+          .biglogo {
+                  display: none;
+          }
+          .smalllogo {
+                  display: block;
+          }
+          img {
+                  width: 50;
+          }
+          li {
+                  margin: 0.1em 0.15em;
+          }
+          .search {
+                  left: 20%;
+                  width: 30%;
+                  border-radius: 1px;
+          }
+          
+          
+  
+  }

@@ -1,0 +1,774 @@
+
+* {
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: "Gothic A1"
+}
+
+body {
+    margin: 0;
+}
+
+.search {
+    position: absolute;
+    font-size: 1rem; 
+    padding: 10px;
+    width: 20%;
+    left: 20%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    top: 30%;
+    transition: all .5s ease;
+}
+.search:hover {
+    border: 2px solid rgb(139, 232, 139);
+}
+header {
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    padding: 0.7em;
+    background-color: white;
+    z-index: 100;
+    height: 10%;
+    border-bottom:1px solid rgb(232, 232, 232);
+    box-shadow: 3px 0px 20px rgb(213, 213, 213);
+}
+.logo {
+    position: relative;
+    top: 0.5em;
+    left: 0.8em;
+
+    width: 15em;
+}
+.biglogo {
+	display: block;
+}
+.smalllogo {
+	display: none;
+}
+.logoFontFormatter {
+    font-family: 'Monoton';
+    color: gray;
+    font-size: 2em;
+
+}
+.logoText {
+    font-family: "Gothic A1";
+    color: black;
+    font-size: 2em;
+}
+
+.green {
+    color:green;
+  }
+ul {
+    position: fixed;
+    margin: 0.5em;
+    text-align: right;
+    overflow: hidden;
+    font-family: "Gothic A1";
+    float: left;
+    top: 0.7em;
+    right: 0.3em;
+    font-size: 0.9em;
+
+}
+
+li {
+
+    display: inline-block;
+    color: black;
+    margin: 0.1em 0.3em;
+
+}
+li:hover {
+    border-bottom: 1px solid green;
+}
+
+aside {
+    position: absolute;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 4px;
+   
+    width: 19%;
+    height: 80%;
+    right: 1.75%;
+    top: 12%;
+
+    overflow-y: scroll;
+    box-shadow: 3px 3px 15px rgb(213, 213, 213);
+}
+.sidebarID {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Gothic A1";
+    border-bottom:1px solid rgb(193, 193, 193);
+    font-size: 1.2em;
+    padding: 0.75em;
+    background: white;
+    z-index: 5;
+    position: sticky;
+    top: 0;
+}
+
+figure {
+    position: absolute;
+    display: block;
+    width: 60%;
+    height: 75%;
+    right: 22.5%;
+    margin: 0; 
+    top: 12%;
+   
+    border: 1px solid rgb(227, 227, 227);
+    box-shadow: 3px 3px 20px rgb(213, 213, 213);
+    border-radius: 5px;
+
+}
+.chartID {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Gothic A1";
+    background: rgb(245,245,245);
+    border-bottom:1px solid rgb(193, 193, 193);
+    padding: 1.25em;
+    align-items: center;
+    height: 7%;
+    width:100%;
+}
+.chartDetails {
+    border-right:1px solid rgb(193, 193, 193);
+    float: left;
+    font-family: "Gothic A1";
+    width: 35%;
+    height: 32em;
+    overflow-y: scroll;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    border-left: 1px solid rgb(200,200,200);
+    
+}
+.option {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+    padding: 0.5em;
+}
+strong {font-size: 13px;}
+.option button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border:none;
+    outline: none;
+}
+.visible {
+    display: none;
+
+}
+.stats div {
+	margin: 0 5;
+}
+a:visited {
+    color: black;
+ }
+ .sidebarLine:hover {
+	 background: rgb(235,235,235);
+ }
+.show {
+
+    display: flex;
+    padding: 5px; top: 15%; top: 15%; top: 15%;
+  right: 20%;
+  right: 20%;
+  right: 20%;
+    margin: 5px;
+
+}
+.block {
+    display: block;
+
+    border-bottom: 1px solid rgb(227, 227, 227);
+}
+.show button {
+    margin: 0.5em;
+    font-size: 1.2em;
+}
+.algo {
+	z-index: 1000;
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	border: 1px solid rgb(227, 227, 227);
+    	box-shadow: 3px 3px 20px rgb(213, 213, 213);
+	background: white;
+	transform: translateX(-50%);
+	font-size: 1rem;
+	width: 60%;
+	padding: 1em;
+	display:none;
+}	
+.sidebarLine {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    width: 100%;
+    font-family: "Gothic A1";
+    font-size: 0.5em;
+    border-bottom: 1px solid rgb(227, 227, 227);
+}
+.lineContainer {
+    display: inline-block;
+    width:40%;
+    text-align: left;
+    font-size: 13px;
+
+}
+.lineStart {
+    display: inline-block;
+    width:25%;
+    text-align: right;
+}
+.fig {
+    display: block;
+}
+
+.textsize {
+    font-size: 1rem;
+    cursor: pointer;
+}
+.textsize form {
+	margin: 0;
+}
+.clickable:hover {
+    border-bottom: 1px solid green;
+}
+.spanner {
+    position: absolute;
+    right: 1em;
+    z-index: 200;
+    top: 1em;
+    cursor: pointer;
+}
+
+
+.zzz {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid  rgb(163, 163, 163);
+
+}
+
+.zzz div {
+        width: 33.3333%;
+        text-align: center;
+        padding: 0.5em;
+        cursor: pointer;
+        margin-bottom: 0.4em;
+}
+
+.xxx {
+        font-size: 1.7rem;
+        margin: 1em;
+        
+        
+        
+}
+.yyy {
+        margin: 1.75em;
+        font-size: 1.2rem;
+        line-height: 30px;
+}
+
+.info {
+        display: block;
+        border: 1px solid rgb(227, 227, 227);
+        box-shadow: 3px 3px 20px rgb(213, 213, 213);
+        border-radius: 5px;
+        padding: 0.5em;
+        margin-bottom: 2em;
+        font-family: "Gothic A1";
+        height: auto;
+}
+.xyz {
+        
+        position: absolute;
+        top: 90%;
+        width: 60%;
+        right:22.5%;
+        margin-bottom: 5em;
+}
+
+.leaderboard {
+        display: block;
+        border: 1px solid rgb(227, 227, 227);
+        box-shadow: 3px 3px 20px rgb(213, 213, 213);
+        border-radius: 5px;
+}
+
+
+
+
+
+
+.chart {
+    width: 100%;
+    height: 32em;
+    border: 1px solid red;
+}
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+}
+.bigText {
+    font-size: 1.25em;
+
+}
+.title {
+    border-bottom: 1px solid black;
+}
+
+.red {
+    color: red;
+}
+.gray {
+    color: gray;
+}
+
+.linePos {
+	fill: none;
+	stroke: green;
+	stroke-width: 2;
+}
+.lineNeg {
+	fill: none;
+	stroke: red;
+	stroke-width: 2;
+}
+.lineNu {
+        fill: none;
+        stroke: grey;
+        stroke-width: 2;
+  }
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+.donatetext {
+	text-align: center;
+	font-size: 1.3rem;
+}
+.donatebutton {
+	padding: 50;
+	align-items: center;
+}
+.account img{
+	width: 100;
+	margin: 0 auto;
+	display: block;
+        }
+.donatebutton input {
+	margin: 0 auto;
+	display: block;
+}
+
+.account {
+
+
+
+  font-family: "Gothic A1";
+  background: rgb(245,245,245);
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 4px;
+  padding: 5em 3em;
+
+
+  height: 80%;
+  width:40%;
+  margin: 100 auto;
+  box-shadow: 3px 3px 15px rgb(213, 213, 213);
+}
+.discuss {
+ 
+ 
+  justify-content: space-between;
+  font-family: "Gothic A1";
+  background: rgb(200,200,200);
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 4px;
+  padding: 1.25em;
+  align-items: center;
+
+  width:60%;
+  margin: 100 auto;
+
+  box-shadow: 3px 3px 15px rgb(213, 213, 213);
+}
+.account form {
+	margin: 0 auto;
+}
+.discusshead{
+	margin: 0 auto; 
+}
+.discusslog{
+  background: rgb(245,245,245); 
+  display: flex;
+  flex-direction: column;
+  width:94%;
+  height: 70%;
+  overflow-y: scroll;
+  margin: 20 auto; 
+  border: 1px solid rgb(227,227,227); 
+}
+.discusspost{
+  
+
+  
+  margin: 15 auto; 
+  width: 94%;
+}
+.commentbox{
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5em; 
+  border: 1px solid rgb(227, 227, 227);
+    box-shadow: 3px 3px 15px rgb(213, 213, 213); 
+  background: white;
+}
+.commentname{
+  text-decoration: underline; 
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.comment{
+	font-size: 1.25em;
+	margin: 0.5em;
+}
+
+.signinlogo{
+
+  display: flex;
+  margin: 0 auto;
+  /*border: 1px solid BLACK;*/
+  align-items: center;
+  justify-content: center;
+  top: 1%;
+  margin-bottom: 30px;
+  height: 3%;
+  width: 100%;
+
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+
+
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+figure form #selectTime {
+	position: absolute;
+	top: 10px;
+	left: 30%;
+	font-family: "Gothic A1";
+}
+.signin{
+	margin: 0 auto;
+}
+.SBtooltip {
+	position: absolute;
+	top: 15%;
+	display:none;
+	right: 13%;
+ 	padding: 1em;
+	width: 20%;
+	z-index: 90;
+	background: white;
+	border-bottom:1px solid rgb(232, 232, 232);
+    	box-shadow: 3px 0px 20px rgb(213, 213, 213);
+	line-height: 1.8rem;
+	font-size: 1rem;
+}
+.tool {
+	text-decoration: underline;
+	font-size: 1rem;
+	cursor: help;
+}
+
+li a  {
+	font-size: 13px;
+                }
+p {font-size:13px;}
+/*******************************************/
+
+.lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  left:45%;
+  top:45%;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: green;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .textsize {
+	  font-size: 0.7rem;
+  }
+  .sidebarID {
+          font-size: 1rem;
+  }
+    .stats div, .bigText strong, figure form #selectTime, text, .search, .lineContainer, li a, .tool,p,strong {
+          font-size: 0.8rem;
+  }
+  img {
+	  width: 150;
+	
+  }
+  .logo {
+	  top: 0.9em;
+  }
+  .search {
+	  padding: 7px;
+  }
+  .account {
+	  width: 50%;
+  }
+  .discuss {
+	  width: 70%;
+  }
+  .SBtooltip, .SBtooltip div {
+  	font-size: 0.9rem;
+  }
+  .SBtooltip span {
+	  font-size: 0.9rem !important;
+  }
+}
+@media only screen and (max-width: 1000px){
+    figure {
+	    height: 60%;
+	    width: 70%;
+	    right:27.5%
+    }
+        aside {
+	width: 24%
+    }
+    text {
+	    font-size: 0.65rem;
+    }
+    .search {
+	left: 30%;
+	width: 26%;
+    }
+    .SBtooltip {
+	width: 25%;
+    }
+    .SBtooltip div {
+          font-size: 0.8rem;
+  }
+.xyz {
+        top: 75%;
+        right: 27.5%;
+        width: 70%;   
+  }
+  .yyy {
+          font-size: 1rem;
+  }
+  .xxx {
+          font-size: 1.1rem;
+  }
+  .zzz {
+          font-size: 0.9rem;
+  }
+  #coms, #coms2 {
+          font-size: 1rem;
+  }
+    
+}
+@media only screen and (max-width: 780px) {
+    .textsize {
+          font-size: 0.6rem;
+  }
+  .sidebarID {
+          font-size: 0.9rem;
+  }
+   .stats div, .bigText strong, figure form #selectTime, text, .search, .lineContainer, li a, .tool, p, strong {
+          font-size: 0.7rem;
+   }
+   figure {
+	   height: 55%;
+   }
+   .account {
+          width: 70%;
+   .discuss {
+          width: 90%;
+  }
+  .SBtooltip {
+	  width: 27%;
+  }
+  .SBtooltip div {
+	  font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+	aside {
+		width: 96%;
+		left: 2.25%
+	}
+	figure {
+		display: none;
+	}
+	.textsize {
+		font-size: 1rem;
+	}
+	.sidebarID {
+		font-size: 1.3rem;
+	}
+	.tool {
+		font-size: 1rem;
+	}
+	.biglogo {
+		display: none;
+	}
+	.smalllogo {
+		display: block;
+	}
+	img {
+		width: 50;
+	}
+	li {
+		margin: 0.1em 0.15em;
+	}
+	.search {
+		left: 20%;
+		width: 30%;
+		border-radius: 1px;
+	}
+		.account {
+          width: 92%;
+
+	}
+	.discuss {
+          width: 95%;
+ 	} 
+	.SBtooltip {
+          	width: 50%;
+  	}
+  	.SBtooltip div {
+          font-size: 0.8rem;
+  	}
+	.xyz {
+                width: 96%;
+                top: 95%;
+                right: 2.25%;
+                   
+          }
+          .yyy {
+                  font-size: 1rem;
+          }
+          .xxx {
+                  font-size: 1.1rem;
+          }
+          .zzz {
+                  font-size: 0.9rem;
+          }
+          #coms, #coms2 {
+                  font-size: 1rem;
+          }
+}
